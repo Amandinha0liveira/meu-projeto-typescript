@@ -35,11 +35,11 @@ var ContaCorrente = /** @class */ (function (_super) {
     }
     //sobrescrevendo
     ContaCorrente.prototype.exibirSaldo = function () {
-        var total = this.saldo + this.limiteCredito;
-        return "Saldo: ".concat(_super.prototype.exibirSaldo.call(this), " e o saldo total com credito ").concat(this.saldo);
+        var saldoTotal = this.saldo + this.limiteCredito;
+        return "Saldo: ".concat(_super.prototype.exibirSaldo.call(this), " e o saldo total com credito ").concat(saldoTotal);
     };
     return ContaCorrente;
 }(ContaBancaria));
 //testando
-var ContaCorrenteExemplo = new ContaCorrente('Hermione', 10000, 2500);
+var ContaCorrenteExemplo = new ContaCorrente('Hermione', 10000, 150);
 console.log(ContaCorrenteExemplo.exibirSaldo());

@@ -2,7 +2,7 @@
 
 //classe
 class ContaBancaria {
-    constructor(public titular: string, public saldo: number){}
+    constructor(public titular: string, public saldo: number) { }
 
     exibirSaldo(): string {
         return `O titular ${this.titular} com o saldo ${this.saldo}`
@@ -10,18 +10,18 @@ class ContaBancaria {
 }
 
 //subclasse
-class ContaCorrente extends ContaBancaria{
+class ContaCorrente extends ContaBancaria {
     constructor(titular: string, saldo: number, public limiteCredito: number) {
-        super(titular,saldo)
+        super(titular, saldo);
     }
 
     //sobrescrevendo
     exibirSaldo(): string {
-        const total = this.saldo + this.limiteCredito
-        return `Saldo: ${super.exibirSaldo()} e o saldo total com credito ${this.saldo}`
+        const saldoTotal = this.saldo + this.limiteCredito;
+        return `Saldo: ${super.exibirSaldo()} e o saldo total com credito ${saldoTotal}`
     }
 }
 
 //testando
-const ContaCorrenteExemplo = new ContaCorrente('Hermione',10000,2500);
+const ContaCorrenteExemplo = new ContaCorrente('Hermione', 10000, 150);
 console.log(ContaCorrenteExemplo.exibirSaldo());

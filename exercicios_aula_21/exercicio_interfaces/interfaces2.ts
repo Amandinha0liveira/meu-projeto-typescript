@@ -12,7 +12,7 @@ type Empregado = {
 }
 
 //interseção
-type Funcionario = Pessoa & Empregado
+type Empregada = Pessoa & Empregado
 
 //funçaõ
 function CLT(pessoa: Pessoa, empregado: Empregado): string {

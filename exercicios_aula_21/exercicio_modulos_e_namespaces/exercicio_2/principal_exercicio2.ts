@@ -4,7 +4,7 @@
 import { Financeiro } from "./financeiro";
 
 //mostrando
-const orcamento1 = new Financeiro.Orcamento(150, ['Livro: Cutelo e Corvo','Livro: Dangerous Volume 2', 'Livro: Vespera']);
+const orcamento1 = new Financeiro.Orcamento(150, ['Livro: Cutelo e Corvo', 'Livro: Dangerous Volume 2', 'Livro: Vespera']);
 console.log(orcamento1.exibir());
 
 const valorImposto = Financeiro.calcularImposto(150, 0.15)
